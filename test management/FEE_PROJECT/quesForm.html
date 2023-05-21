@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Form Generator</title>
+        <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #ae0505;
+            color: #fff;
+            padding: 2px;
+            position: sticky;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 2rem;
+            font-family: 'Baloo Bhai';
+            font-size: xx-large;
+            line-height: 80%;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .feature {
+            flex-basis: 30%;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .feature:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature a {
+            display: block;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 34px;
+            top: 20px;
+        }
+
+        .btn {
+            margin: 0px 2px;
+            background-color: rgb(40, 39, 39);
+            color: white;
+            padding: 2px 4px;
+            border: 2px solid grey;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #mail {
+            color: #fff;
+            text-decoration: none;
+            padding: 0px 20px;
+            font: baloo-bhai;
+        }
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label.options {
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-style: italic;
+            padding: 4px;
+        }
+
+        .Ques-head {
+            display: block;
+            font-size: x-large;
+            text-decoration: underline;
+            font-style: italic;
+            padding: 5px;
+            margin-top: 40px;
+            margin-bottom: 2px;
+        }
+
+        input.askques {
+            width: 100%;
+            height: 25px;
+            margin-bottom: 20px;
+        }
+        input.Instructs[type=text] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        }
+        textarea {
+        font-size: large;
+        resize: none;
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        }
+        label[for="mytextarea"]{
+            margin-top: 20px;
+            display:block;
+            font-size: x-large;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        label[for="testname"]{
+            margin-top: 20px;
+            display:block;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        .newques {
+            width: 90%;
+            height: 30px;
+            background-color: #f7f4f4;
+            border: solid;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            /* box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2); */
+        }
+
+        .newques:hover {
+            background-color: #dedcdc;
+            box-shadow: 0px 12px 20px rgba(77, 76, 76, 0.2);
+        }
+        
+        .bottomBtns{
+            margin-top: 50px;
+        }
+        .Submit {
+            background-color: #ae0505;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .Submit:hover {
+            background-color: #ae0505;
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+        }
+        .bttns{
+            padding: 8px;
+            font-size: 16px;
+        }
+        a:hover{
+            color: #8e8d8d;
+        }
+        #mail:hover{
+            color: #8e8d8d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="tel:+917988055030">Contact Us</a></li>
+            </ul>
+            <div class="right">
+                <a href="mailto:nampreet596.be22@chitkara.edu.in" id="mail">E-mail</a>
+                </nav>
+    </header>
+        <div class="container">
+            <h1>GENERATE TEST!!</h1>
+            <form>
+                <div class="form-group">
+                    <label for="testname" class="">TEST NAME:</label>
+                    <input type="text" class="" id="question1">
+
+                    <label for="mytextarea">INSTRUCTIONS:</label>
+                    <textarea id="mytextarea" name="mytextarea"></textarea>
+                    <label for="question1" class="Ques-head">Question 1:</label>
+                    <input type="text" class="askques" id="question1"
+                        name="question1" required>
+                    <div class="radio-group">
+                        <label class="options">a)
+                            <input type="text" name="answer1" required>
+                        </label>
+                        <label class="options">b)
+                            <input type="text" name="answer1" required>
+                        </label>
+                        <label class="options">c)
+                            <input type="text" name="answer1" required>
+                        </label>
+                        <label class="options">d)
+                            <input type="text" name="answer1" required>
+                        </label>
+                        <label class="options">Correct Answer
+                            <label>
+                                <input type="radio" name="q1" value="a">a)</label>
+                            <label>
+                                <input type="radio" name="q1" value="b">b)</label>
+                            <label>
+                                <input type="radio" name="q1" value="c">c)</label>
+                            <label>
+                                <input type="radio" name="q1" value="c">d)</label>
+                        </label>
+
+                        <label for="question1" class="Ques-head">Question 2:</label>
+                        <input type="text" class="askques" id="question1"
+                            name="question1" required>
+                        <div class="radio-group">
+                            <label class="options">Option 1
+                                <input type="text" name="answer1" required>
+                            </label>
+                            <label class="options">Option 2
+                                <input type="text" name="answer1" required>
+                            </label>
+                            <label class="options">Option 3
+                                <input type="text" name="answer1" required>
+                            </label>
+                            <label class="options">Option 4
+                                <input type="text" name="answer1" required>
+                            </label>
+                            <label class="options">Correct Answer
+                                <label>
+                                    <input type="radio" name="q2" value="a">a)</label>
+                                <label>
+                                    <input type="radio" name="q2" value="b">b)</label>
+                                <label>
+                                    <input type="radio" name="q2" value="c">c)</label>
+                                <label>
+                                    <input type="radio" name="q2" value="c">d)</label>
+                            </label>
+
+                            <label for="question1" class="Ques-head">Question 3:</label>
+                            <input type="text" class="askques" id="question1"
+                                name="question1" required>
+                            <div class="radio-group">
+                                <label class="options">Option 1
+                                    <input type="text" name="answer1" required>
+                                </label>
+                                <label class="options">Option 2
+                                    <input type="text" name="answer1" required>
+                                </label>
+                                <label class="options">Option 3
+                                    <input type="text" name="answer1" required>
+                                </label>
+                                <label class="options">Option 4
+                                    <input type="text" name="answer1" required>
+                                </label>
+                                <label class="options">Correct Answer
+                                    <label>
+                                        <input type="radio" name="q3" value="a">a)</label>
+                                    <label>
+                                        <input type="radio" name="q3" value="b">b)</label>
+                                    <label>
+                                        <input type="radio" name="q3" value="c">c)</label>
+                                    <label>
+                                        <input type="radio" name="q3" value="c">d)</label>
+                                </label>
+
+
+                                <label for="question1" class="Ques-head">Question
+                                    4:</label>
+                                <input type="text" class="askques"
+                                    id="question1" name="question1" required>
+                                <div class="radio-group">
+                                    <label class="options">Option 1
+                                        <input type="text" name="answer1"
+                                            required>
+                                    </label>
+                                    <label class="options">Option 2
+                                        <input type="text" name="answer1"
+                                            required>
+                                    </label>
+                                    <label class="options">Option 3
+                                        <input type="text" name="answer1"
+                                            required>
+                                    </label>
+                                    <label class="options">Option 4
+                                        <input type="text" name="answer1"
+                                            required>
+                                    </label>
+                                    <label class="options">Correct Answer
+                                        <label>
+                                            <input type="radio" name="q4"
+                                                value="a">a)</label>
+                                        <label>
+                                            <input type="radio" name="q4"
+                                                value="b">b)</label>
+                                        <label>
+                                            <input type="radio" name="q4"
+                                                value="c">c)</label>
+                                        <label>
+                                            <input type="radio" name="q4"
+                                                value="c">d)</label>
+                                    </label>
+
+                                    <label for="question1" class="Ques-head">Question
+                                        5:</label>
+                                    <input type="text" class="askques"
+                                        id="question1" name="question1"
+                                        required>
+                                    <div class="radio-group">
+                                        <label class="options">Option 1
+                                            <input type="text" name="answer1"
+                                                required>
+                                        </label>
+                                        <label class="options">Option 2
+                                            <input type="text" name="answer1"
+                                                required>
+                                        </label>
+                                        <label class="options">Option 3
+                                            <input type="text" name="answer1"
+                                                required>
+                                        </label>
+                                        <label class="options">Option 4
+                                            <input type="text" name="answer1"
+                                                required>
+                                        </label>
+                                        <label class="options">Correct Answer
+                                            <label>
+                                                <input type="radio" name="q5"
+                                                    value="a">a)</label>
+                                            <label>
+                                                <input type="radio" name="q5"
+                                                    value="b">b)</label>
+                                            <label>
+                                                <input type="radio" name="q5"
+                                                    value="c">c)</label>
+                                            <label>
+                                                <input type="radio" name="q5"
+                                                    value="c">d)</label>
+                                        </label>
+
+                                        <label for="question1"
+                                            class="Ques-head">Question 6:</label>
+                                        <input type="text" class="askques"
+                                            id="question1" name="question1"
+                                            required>
+                                        <div class="radio-group">
+                                            <label class="options">Option 1
+                                                <input type="text"
+                                                    name="answer1" required>
+                                            </label>
+                                            <label class="options">Option 2
+                                                <input type="text"
+                                                    name="answer1" required>
+                                            </label>
+                                            <label class="options">Option 3
+                                                <input type="text"
+                                                    name="answer1" required>
+                                            </label>
+                                            <label class="options">Option 4
+                                                <input type="text"
+                                                    name="answer1" required>
+                                            </label>
+                                            <label class="options">Correct
+                                                Answer
+                                                <label>
+                                                    <input type="radio"
+                                                        name="q6" value="a">a)</label>
+                                                <label>
+                                                    <input type="radio"
+                                                        name="q6" value="b">b)</label>
+                                                <label>
+                                                    <input type="radio"
+                                                        name="q6" value="c">c)</label>
+                                                <label>
+                                                    <input type="radio"
+                                                        name="q6" value="c">d)</label>
+                                            </label>
+
+                                            <label for="question1"
+                                                class="Ques-head">Question 7:</label>
+                                            <input type="text" class="askques"
+                                                id="question1" name="question1"
+                                                required>
+                                            <div class="radio-group">
+                                                <label class="options">Option 1
+                                                    <input type="text"
+                                                        name="answer1" required>
+                                                </label>
+                                                <label class="options">Option 2
+                                                    <input type="text"
+                                                        name="answer1" required>
+                                                </label>
+                                                <label class="options">Option 3
+                                                    <input type="text"
+                                                        name="answer1" required>
+                                                </label>
+                                                <label class="options">Option 4
+                                                    <input type="text"
+                                                        name="answer1" required>
+                                                </label>
+                                                <label class="options">Correct
+                                                    Answer
+                                                    <label>
+                                                        <input type="radio"
+                                                            name="q1" value="a">a)</label>
+                                                    <label>
+                                                        <input type="radio"
+                                                            name="q1" value="b">b)</label>
+                                                    <label>
+                                                        <input type="radio"
+                                                            name="q1" value="c">c)</label>
+                                                    <label>
+                                                        <input type="radio"
+                                                            name="q1" value="c">d)</label>
+                                                </label>
+
+                                                <label for="question1"
+                                                    class="Ques-head">Question
+                                                    8:</label>
+                                                <input type="text"
+                                                    class="askques"
+                                                    id="question1"
+                                                    name="question1" required>
+                                                <div class="radio-group">
+                                                    <label class="options">Option
+                                                        1
+                                                        <input type="text"
+                                                            name="answer1"
+                                                            required>
+                                                    </label>
+                                                    <label class="options">Option
+                                                        2
+                                                        <input type="text"
+                                                            name="answer1"
+                                                            required>
+                                                    </label>
+                                                    <label class="options">Option
+                                                        3
+                                                        <input type="text"
+                                                            name="answer1"
+                                                            required>
+                                                    </label>
+                                                    <label class="options">Option
+                                                        4
+                                                        <input type="text"
+                                                            name="answer1"
+                                                            required>
+                                                    </label>
+                                                    <label class="options">Correct
+                                                        Answer
+                                                        <label>
+                                                            <input type="radio"
+                                                                name="q1"
+                                                                value="a">a)</label>
+                                                        <label>
+                                                            <input type="radio"
+                                                                name="q1"
+                                                                value="b">b)</label>
+                                                        <label>
+                                                            <input type="radio"
+                                                                name="q1"
+                                                                value="c">c)</label>
+                                                        <label>
+                                                            <input type="radio"
+                                                                name="q1"
+                                                                value="c">d)</label>
+                                                    </label>
+
+                                                    <label for="question1"
+                                                        class="Ques-head">Question
+                                                        9:</label>
+                                                    <input type="text"
+                                                        class="askques"
+                                                        id="question1"
+                                                        name="question1"
+                                                        required>
+                                                    <div class="radio-group">
+                                                        <label class="options">Option
+                                                            1
+                                                            <input type="text"
+                                                                name="answer1"
+                                                                required>
+                                                        </label>
+                                                        <label class="options">Option
+                                                            2
+                                                            <input type="text"
+                                                                name="answer1"
+                                                                required>
+                                                        </label>
+                                                        <label class="options">Option
+                                                            3
+                                                            <input type="text"
+                                                                name="answer1"
+                                                                required>
+                                                        </label>
+                                                        <label class="options">Option
+                                                            4
+                                                            <input type="text"
+                                                                name="answer1"
+                                                                required>
+                                                        </label>
+                                                        <label class="options">Correct
+                                                            Answer
+                                                            <label>
+                                                                <input
+                                                                    type="radio"
+                                                                    name="q1"
+                                                                    value="a">a)</label>
+                                                            <label>
+                                                                <input
+                                                                    type="radio"
+                                                                    name="q1"
+                                                                    value="b">b)</label>
+                                                            <label>
+                                                                <input
+                                                                    type="radio"
+                                                                    name="q1"
+                                                                    value="c">c)</label>
+                                                            <label>
+                                                                <input
+                                                                    type="radio"
+                                                                    name="q1"
+                                                                    value="c">d)</label>
+                                                        </label>
+                                                        <label for="question1"
+                                                            class="Ques-head">Question
+                                                            10:</label>
+                                                        <input type="text"
+                                                            class="askques"
+                                                            id="question1"
+                                                            name="question1"
+                                                            required>
+                                                        <div
+                                                            class="radio-group">
+                                                            <label
+                                                                class="options">Option
+                                                                1
+                                                                <input
+                                                                    type="text"
+                                                                    name="answer1"
+                                                                    required>
+                                                            </label>
+                                                            <label
+                                                                class="options">Option
+                                                                2
+                                                                <input
+                                                                    type="text"
+                                                                    name="answer1"
+                                                                    required>
+                                                            </label>
+                                                            <label
+                                                                class="options">Option
+                                                                3
+                                                                <input
+                                                                    type="text"
+                                                                    name="answer1"
+                                                                    required>
+                                                            </label>
+                                                            <label class="options">
+                                                                Option
+                                                                4
+                                                                <input
+                                                                    type="text"
+                                                                    name="answer1"
+                                                                    required>
+                                                            </label>
+                                                            <button class="newques">Add New Question</button>
+                                                       <div class="bottomBtns">
+                        
+                                                            <button type ="submit"class="Submit">Submit</button>
+                                                            <button type ="reset" class="bttns">Clear</button>
+                                                            <button class="bttns">Save as draft</button>
+                                                        </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </body>
+
+                                    </html>

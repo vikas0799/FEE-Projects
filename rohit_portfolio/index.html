@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const name = form.elements['name'].value;
+      const email = form.elements['email'].value;
+      const message = form.elements['message'].value;
+
+      const url = `portfolio.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
+
+      window.location.href = url;
+    });
+  </script>
+
+</body>
+</html>

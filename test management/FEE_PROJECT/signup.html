@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+      body {
+        background: url('background.svg') no-repeat center center fixed;
+        background-size: cover;
+      }
+  #signup-form {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px #fff;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Styles for screens with a width of 600px or less */
+  @media only screen and (max-width: 1000px) {
+    #signup-form {
+      width: 70%;
+      margin-top: 65%;
+    }
+    label {
+      font-size: larger;
+    }
+  }
+
+  input[type="reset"] {
+    margin-left: 5px;
+  }
+
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #565555;
+  }
+
+  /* #signup{
+    position: relative;
+    bottom: 74px;
+  } */
+</style>
+  </head>
+  <body>
+    <div id="signup-form">
+      <h1>Sign Up</h1>
+      <form action="aftrLogin.html">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="username">Username (8 letters)</label>
+    <input type="text" id="username" name="username" required pattern=".{8,16}" title="Username must be 8 to 16 characters long">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm-password">Confirm Password</label>
+    <input type="password" id="confirm-password" name="confirm-password">
+
+    <input type="submit" value="Sign Up" id="signup">
+    <input type="reset" value="Clear">
+
+    <p>Already have an account? <a href='loginPage.html'>Log in</a></p>
+  </form>   
+</div>
+  </body>
+</html>
+
+
+
+

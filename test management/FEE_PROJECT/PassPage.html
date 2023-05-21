@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>GIVE TEST</title>
+    <style>
+      body {
+        background: url('background.svg') no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      #pass-form {
+        width: 600px;
+        margin: 120px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        text-shadow: 1px 1px #fff;
+        
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Styles for screens with a width of 600px or less */
+      @media only screen and (max-width: 1000px) {
+        #login-form {
+        width: 70%;
+        margin-top: 65%;}
+        label{
+          font-size: larger;
+      }
+    }
+    input[type="reset"] {
+      margin-left: 5px;
+    }
+    input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #565555;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="pass-form">
+      <h1>GIVE TEST!!</h1>
+      <form action="questions.html">
+      <!-- <form method="post" action="aftrLogin.html"> -->
+      <label for="link">Enter link</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Submit" id="Submit">
+      <input type="reset" value="Clear"></form>
+
+      
+      
+    </div>
+  </body>
+</html>

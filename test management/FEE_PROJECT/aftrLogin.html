@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Management</title>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Baloo Bhai'>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #ae0505;
+    color: #fff;
+    padding: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.hero {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Baloo Bhai';
+    font-size: xx-large;
+    line-height: 80%;
+}
+
+.features {
+    display: flex;
+    /* justify-content: space-between; */
+    
+    flex-wrap: wrap;
+    padding: 2rem;
+    text-align: center;
+}
+
+.feature {
+    flex-basis: 30%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    margin-left: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.feature:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+}
+.icon {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: auto 20%;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+#icon1{
+            background: url(icon1.svg) no-repeat center center;
+            background-size: 72%;
+        }
+        #icon2{
+            background: url(icon2.svg) no-repeat center center;
+            background-size: 72%;
+        }
+        #icon3{
+            background: url(icon3.svg) no-repeat center center;
+            background-size: 72%;
+        }
+        #icon4{
+            background: url(icon4.svg) no-repeat center center;
+            background-size: 65%;
+        }
+        #icon5{
+            background: url(icon5.svg) no-repeat center center;
+            background-size: 62%;
+        }
+
+.icon:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.right{
+   display: inline-block;
+   /* border: 2px solid rgb(0, 72, 12); */
+   position:absolute;
+   right:34px;
+   top:20px;
+}
+.btn{
+   margin: 0px 2px;
+   background-color: rgb(40, 39, 39);
+   color: white;
+   padding: 2px 4px;
+   border: 2px solid grey; 
+   border-radius: 8px;
+   font-size: 15px;
+   cursor: pointer;
+} 
+#mail{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 20px;
+    font: baloo-bhai;
+}
+
+a:hover{
+            color: #8e8d8d;
+        }
+        #mail:hover{
+            color: #8e8d8d;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="aftrLogin.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="tel:+917988055030">Contact Us</a></li>
+            </ul>
+            <div class="right">
+                <a href="mailto:nampreet596.be22@chitkara.edu.in" id="mail">E-mail</a>
+                <a href="index.html"><button class="btn">Logout</button></a>
+        </nav>
+    </header>
+        <div class="hero">
+            <h1>Test Management</h1>
+            <p>Manage your tests with ease</p>
+        </div>
+    
+    <main>
+        <section class="features">
+            <div class="feature">
+                <a href="quesForm.html">
+                    <div class="icon create-test" id="icon1"></div>
+                    <h2>Create Test</h2>
+                    <p>Create a new test and add questions</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="drafts.html">
+                    <div class="icon view-drafts" id="icon2"></div>
+                    <h2>View Drafts</h2>
+                    <p>View and edit your saved drafts</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="#">
+                    <div class="icon generated-tests" id="icon3"></div>
+                    <h2>Generated Tests</h2>
+                    <p>View previously generated tests</p>
+                </a>
+            </div>
+           
+            <div class="feature">
+                <a href="PassPage.html">
+                    <div class="icon give-test" id="icon4"></div>
+                    <h2>Give Test</h2>
+                    <p>Appear for a test with a link and a password</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="prtest.html">
+                <div class="icon give-test" id="icon5" onclick="document.getElementById('login-popup').style.display='block'"></div>
+                <h2>Test logs</h2>
+                <p>View your previous tests</p></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
