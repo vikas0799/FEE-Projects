@@ -7,13 +7,18 @@ modal.style.display = "block";
 span.onclick = function() {
 modal.style.display = "none";
 }
-window.onload = function() {
-setTimeout(function() {
-modal.style.display = 'block';
-}, 3000);
-}
+// window.onload = function() {
+// setTimeout(function() {
+// modal.style.display = 'block';
+// }, 3000);
+// }
 window.onclick = function(event) {
 if (event.target == modal) {
 modal.style.display = "none";
 }
 }
+
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    alert("john wick")
+});

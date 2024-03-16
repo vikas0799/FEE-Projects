@@ -6,7 +6,7 @@ const search = document.getElementById("search");
 
 const url = (city) =>
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
-
+// `https://api.openweathermap.org/data/2.5/weather?q=kanpur&appid=3265874a2c77ae4a04bb96236a642d2f`
 async function getWeatherByLocation(city) {
     const resp = await fetch(url(city), { origin: "cors" });
     const respData = await resp.json();

@@ -34,6 +34,32 @@ function generateSuggestion(userIp)
 //onchange event fire
 ip.addEventListener("input",function()
 {
+    console.log("hello input");
     const userIp = ip.value;
     generateSuggestion(userIp); //called function by taking input value
 })
+
+ip.addEventListener("focus",function()
+{
+    document.getElementsByClassName("sug")[0].innerHTML=history;
+    console.log("hello history focus");
+    // const userIp = ip.value;
+    // generateSuggestion(userIp); //called function by taking input value
+})
+
+let history=[];
+
+function redirect(){
+    let input_value=document.getElementById("in").value;
+    if(history.length<=8)
+    history.push(input_value);
+    else{
+        history.shift();
+        history.push(input_value);
+    }
+   
+    console.log(window.history);
+     let url="https://www.google.com/search?q="+input_value;
+     window.open(url);
+    }
+
